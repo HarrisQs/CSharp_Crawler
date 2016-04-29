@@ -15,7 +15,7 @@ namespace WebCatchData
 {
     class Program
     {
-        private static System.Timers.Timer _Timer = new System.Timers.Timer(3000);
+        private static System.Timers.Timer _Timer = new System.Timers.Timer(300000);
         static void Main()
         {
             _Timer.Elapsed += OnTimedEvent;
