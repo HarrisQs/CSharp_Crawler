@@ -25,7 +25,12 @@ You can use `git clone git@github.com:HarrisQs/WebCatchData.git` to clone this p
 ## Tests
 
 ![Disconnect](https://github.com/HarrisQs/WebCatchData/blob/master/Picture/Disconnect.PNG)
+		
+		Picture.1 Can't connect with the website.
 
+![Connect](https://github.com/HarrisQs/WebCatchData/blob/master/Picture/Connect.PNG)
+
+		Picture.1 Connect susseccsful with the website.
 
 ## Contributors
 
