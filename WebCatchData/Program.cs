@@ -18,15 +18,26 @@ namespace WebCatchData
         }
         private static void CreateWebRequest()
         {
-                //建立一個網頁連線並取得上面的資料
-                WebRequest request = WebRequest.Create("http://140.138.6.120/sampling.php");
-                WebResponse response = request.GetResponse();
-                Console.WriteLine("WebSite Response Status : " + ((HttpWebResponse)response).StatusDescription);
-                StreamReader reader = new StreamReader(response.GetResponseStream());
-                string responseFromServer = reader.ReadToEnd();
-                string jsonString = responseFromServer;
-                dynamic json = JObject.Parse(jsonString);
-                string answer = json.Co2;
+            //建立一個網頁連線並取得上面的資料
+            WebRequest request = WebRequest.Create("http://140.138.6.120/sampling.php");
+            WebResponse response = request.GetResponse();
+            Console.WriteLine("WebSite Response Status : " + ((HttpWebResponse)response).StatusDescription);
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            string responseFromServer = reader.ReadToEnd();
+            string jsonString = responseFromServer;
+            JObject json = JObject.Parse(jsonString);
+            String [] catchGoal = { "Co2", "Temperature", "Humidity" };
+            for (int i = 0; i < 3; i++) {
+
+                SaveFile(catchGoal[i]+".txt", json[catchGoal[i]].ToString());
+            }
+        }
+        private static void SaveFile(String filaName, String Data)
+        {
+            using (StreamWriter outputFile = new StreamWriter(filaName))
+            {
+                outputFile.WriteLine(Data);
+            }
         }
     }
 }
