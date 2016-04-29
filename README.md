@@ -30,7 +30,7 @@ You can use `git clone git@github.com:HarrisQs/WebCatchData.git` to clone this p
 
 ![Connect](https://github.com/HarrisQs/WebCatchData/blob/master/Picture/Connect.PNG)
 
-		Picture.1 Connect susseccsful with the website.
+		Picture.2 Connect susseccsful with the website.
 
 ## Contributors
 
