@@ -1,6 +1,6 @@
 ﻿//2016/04/29
 //Programmer：張弘瑜
-//從網頁抓取上面的資料
+//每五分鐘從網頁上抓取資料
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,8 +15,18 @@ namespace WebCatchData
 {
     class Program
     {
+        private static System.Timers.Timer _Timer = new System.Timers.Timer(3000);
         static void Main()
         {
+            _Timer.Elapsed += OnTimedEvent;
+            _Timer.AutoReset = true;//repeated events
+            _Timer.Enabled = true; // Start the timer
+            Console.WriteLine("Press the Enter key to exit the program at any time... ");
+            Console.ReadLine();
+        }
+        private static void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            Console.WriteLine("\nThe Catch event was raised at {0}", e.SignalTime);
             CreateWebRequest();
         }
         private static void CreateWebRequest()
@@ -34,7 +44,7 @@ namespace WebCatchData
                 String [] catchGoal = { "Co2", "Temperature", "Humidity" };
                 for (int i = 0; i < 3; i++) {
 
-                    SaveFile(catchGoal[i]+".txt", json[catchGoal[i]].ToString());
+                    SaveData(catchGoal[i]+".txt", json[catchGoal[i]].ToString());
                 }
             }
             catch (WebException e)//如果沒連上網頁的話
@@ -42,7 +52,7 @@ namespace WebCatchData
                 Console.WriteLine("Exception thrown.\nThe Original Message is: " + e.Message);
             }
         }
-        private static void SaveFile(String filaName, String Data)//把資料存成檔案
+        private static void SaveData(String filaName, String Data)//把資料存成檔案
         {
             using (StreamWriter outputFile = new StreamWriter(filaName))
             {
