@@ -4,7 +4,7 @@
 
 The program will go to a website which detects the enviroment informantion of computer classroom to save that into a file.
 
-## Code Example
+## Code Need
 
 Because this program need to parse **json**, it need a package "Newtonsoft.Json".
 
@@ -30,7 +30,7 @@ You can use `git clone git@github.com:HarrisQs/WebCatchData.git` to clone this p
 
 ![Connect](https://github.com/HarrisQs/WebCatchData/blob/master/Picture/Connect.PNG)
 
-		Picture.2 Connect susseccsful with the website.
+		Picture.2 Connect susseccsfully with the website.
 
 ## Contributors
 
