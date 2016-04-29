@@ -24,7 +24,8 @@ You can use `git clone git@github.com:HarrisQs/WebCatchData.git` to clone this p
 
 ## Tests
 
-Describe and show how to run the tests with code examples.
+![Disconnect](https://github.com/HarrisQs/WebCatchData/blob/master/Picture/Disconnect.PNG)
+
 
 ## Contributors
 
