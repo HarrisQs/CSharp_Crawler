@@ -22,7 +22,7 @@ You can use `git clone git@github.com:HarrisQs/WebCatchData.git` to clone this p
 
 * [Use this package to parse json](http://www.newtonsoft.com/json)
 
-## Tests
+## Result
 
 ![Disconnect](https://github.com/HarrisQs/WebCatchData/blob/master/Picture/Disconnect.PNG)
 		
