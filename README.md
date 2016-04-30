@@ -4,7 +4,7 @@
 
 The program will go to a website which detects the enviroment informantion of computer classroom to save that into a file.
 
-## Code Need
+## Code Requirement
 
 Because this program need to parse **json**, it need a package "Newtonsoft.Json".
 
