@@ -15,7 +15,7 @@ namespace WebCatchData
 {
     class Program
     {
-        private static System.Timers.Timer _Timer = new System.Timers.Timer(3000);
+        private static System.Timers.Timer _Timer = new System.Timers.Timer(300000);//五分鐘
         static void Main()
         {
             Console.WriteLine("Press the Enter key to exit the program at any time... ");
