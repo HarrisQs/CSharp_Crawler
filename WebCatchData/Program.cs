@@ -19,7 +19,7 @@ namespace WebCatchData
         static void Main()
         {
             Console.WriteLine("Press the Enter key to exit the program at any time... ");
-            Console.WriteLine("\nThe Catch event was raised at {0}", DateTime.Now.ToString("tt HH:mm:ss"));     
+            Console.WriteLine("\nThe Catch event was raised at {0}", DateTime.Now.ToString("yyyy/MM/dd tt hh:mm:ss"));     
             CreateWebRequest();
             _Timer.Elapsed += OnTimedEvent;
             _Timer.AutoReset = true;//repeated events
@@ -49,7 +49,7 @@ namespace WebCatchData
                     SaveData(catchGoal[i]+".txt", json[catchGoal[i]].ToString());
                 }
             }
-            catch (WebException e)//如果沒連上網頁的話
+            catch (Exception e)//如果沒連上網頁的話
             {
                 Console.WriteLine("Exception thrown.\nThe Original Message is: " + e.Message);
             }
