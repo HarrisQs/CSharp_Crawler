@@ -15,13 +15,15 @@ namespace WebCatchData
 {
     class Program
     {
-        private static System.Timers.Timer _Timer = new System.Timers.Timer(300000);
+        private static System.Timers.Timer _Timer = new System.Timers.Timer(3000);
         static void Main()
         {
+            Console.WriteLine("Press the Enter key to exit the program at any time... ");
+            Console.WriteLine("\nThe Catch event was raised at {0}", DateTime.Now.ToString("tt HH:mm:ss"));     
+            CreateWebRequest();
             _Timer.Elapsed += OnTimedEvent;
             _Timer.AutoReset = true;//repeated events
             _Timer.Enabled = true; // Start the timer
-            Console.WriteLine("Press the Enter key to exit the program at any time... ");
             Console.ReadLine();
         }
         private static void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
