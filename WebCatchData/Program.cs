@@ -46,6 +46,7 @@ namespace WebCatchData
                 String [] catchGoal = { "Co2", "Temperature", "Humidity" };
                 for (int i = 0; i < 3; i++) {
 
+                    Console.WriteLine(catchGoal[i] + " : " + json[catchGoal[i]].ToString());
                     SaveData(catchGoal[i]+".txt", json[catchGoal[i]].ToString());
                 }
             }
