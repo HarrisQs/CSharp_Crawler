@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -16,8 +17,19 @@ namespace WebCatchData
     class Program
     {
         private static System.Timers.Timer _Timer = new System.Timers.Timer(300000);//五分鐘
+        [DllImport("User32.dll", EntryPoint = "FindWindow")]//FindWindow
+        private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("User32.dll", EntryPoint = "ShowWindow")]   //ShowWindow
+        private static extern bool ShowWindow(IntPtr hWnd, int type);
+ 
         static void Main()
         {
+            Console.Title = "CatchCo2";
+            IntPtr ParenthWnd = new IntPtr(0);
+            ParenthWnd = FindWindow(null, "CatchCo2");
+            ShowWindow(ParenthWnd, 0);//隱藏本dos窗體, 0: 後台執行；1:正常啟動；2:最小化到開始列；3:最大化
+
             Console.WriteLine("Press the Enter key to exit the program at any time... ");
             Console.WriteLine("\nThe Catch event was raised at {0}", DateTime.Now.ToString("yyyy/MM/dd tt hh:mm:ss"));     
             CreateWebRequest();
