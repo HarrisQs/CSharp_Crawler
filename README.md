@@ -21,6 +21,7 @@ You can use `git clone git@github.com:HarrisQs/WebCatchData.git` to clone this p
 * [How to add a timer in a console](https://msdn.microsoft.com/zh-tw/library/system.timers.timer.elapsed(v=vs.110).aspx)
 * [Use this package to parse json](http://www.newtonsoft.com/json)
 * [Obtain current date and time in C#](http://swaywang.blogspot.tw/2012/10/cdatetime-format-string.html)
+* [C # console application Start minimized or hidden small blackboard](http://www.cnblogs.com/pccai/archive/2011/03/08/1977692.html)
 
 ## Result
 
