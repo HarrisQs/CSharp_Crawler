@@ -1,8 +1,8 @@
-# WebCatchData
+# C# Crawler
 
 ## Synopsis
 
-The program will go to a website which detects the enviroment informantion of computer classroom to save that into a file.
+The program go the website which detects the enviroment informantion of computer classroom to save that into a file.
 
 ## Code Requirement
 
@@ -14,7 +14,7 @@ And you can use `Install-Package Newtonsoft.Json` this command in NuGet Package 
 
 ## Installation
 
-You can use `git clone git@github.com:HarrisQs/WebCatchData.git` to clone this project, then open it with visual studio.
+You can use `git clone git@github.com:HarrisQs/WebCatchData.git` to clone this project, then open it with visual studio 2013.
 
 ## API Reference
 
